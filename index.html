@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CARE — Community Access & Resilience Education</title>
 <meta name="description" content="CARE is a community-based organization dedicated to empowering underserved communities through preventive health education, healthcare enrollment support, nutrition resources, and community outreach.">
+<link rel="icon" href="care-logo.png" type="image/png">
+<link rel="apple-touch-icon" href="care-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
@@ -72,19 +74,16 @@
     gap: 10px;
   }
 
-  .nav-logo-mark {
-    width: 32px;
-    height: 32px;
-    background: var(--green);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-family: var(--sans);
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: .5px;
+  .nav-logo-img {
+    height: 48px;
+    width: 48px;
+    display: block;
+    object-fit: contain;
+  }
+
+  .footer-logo .nav-logo-img {
+    height: 40px;
+    width: 40px;
   }
 
   .nav-links {
@@ -849,8 +848,7 @@
 <!-- NAV -->
 <nav>
   <a href="#home" class="nav-logo">
-    <div class="nav-logo-mark">C</div>
-    CARE
+    <img src="care-logo.png" alt="CARE — Community Access &amp; Resilience Education" class="nav-logo-img" width="48" height="48">
   </a>
   <ul class="nav-links" id="nav-links">
     <li><a href="#home">Home</a></li>
@@ -1238,8 +1236,7 @@
 <!-- FOOTER -->
 <footer>
   <a href="#home" class="footer-logo">
-    <div class="nav-logo-mark">C</div>
-    CARE
+    <img src="care-logo.png" alt="CARE" class="nav-logo-img" width="40" height="40">
   </a>
   <ul class="footer-links">
     <li><a href="#home">Home</a></li>
