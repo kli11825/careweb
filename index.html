@@ -4,21 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CARE — Community Access & Resilience Education</title>
-<meta name="description" content="CARE is a community-based organization dedicated to empowering underserved communities through preventive health education, healthcare enrollment support, nutrition resources, and community outreach.">
+<meta name="description" content="CARE walks alongside underserved communities through enrollment assistance, health education, digital literacy, and transportation support in Los Angeles.">
 <link rel="icon" href="care-logo.png" type="image/png">
 <link rel="apple-touch-icon" href="care-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
     --green: #1D9E75;
     --green-dark: #0F6E56;
-    --green-deep: #085041;
+    --green-deep: #0A3D32;
     --green-light: #E1F5EE;
     --green-mid: #9FE1CB;
+    --gold: #C4A35A;
     --amber: #EF9F27;
     --amber-light: #FAEEDA;
     --text: #1a1a18;
@@ -26,70 +27,51 @@
     --text-faint: #8a8a84;
     --bg: #fafaf8;
     --bg-card: #ffffff;
-    --bg-section: #f4f4f0;
-    --border: rgba(0,0,0,0.08);
-    --border-med: rgba(0,0,0,0.12);
-    --radius: 12px;
+    --bg-section: #f3f5f2;
+    --border: rgba(10,61,50,0.08);
+    --border-med: rgba(10,61,50,0.14);
+    --shadow: 0 10px 30px rgba(10,61,50,0.06);
+    --radius: 14px;
     --radius-sm: 8px;
     --sans: 'DM Sans', sans-serif;
     --serif: 'DM Serif Display', serif;
   }
 
-  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-
-  [id] { scroll-margin-top: 80px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  [id] { scroll-margin-top: 84px; }
 
   body {
     font-family: var(--sans);
     background: var(--bg);
     color: var(--text);
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── NAV ── */
   nav {
     position: sticky;
     top: 0;
     z-index: 200;
     background: rgba(250,250,248,0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
-    height: 64px;
+    padding: 0 36px;
+    height: 68px;
   }
 
-  .nav-logo {
-    font-family: var(--serif);
-    font-size: 22px;
-    color: var(--text);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .nav-logo-img {
-    height: 48px;
-    width: 48px;
-    display: block;
-    object-fit: contain;
-  }
-
-  .footer-logo .nav-logo-img {
-    height: 40px;
-    width: 40px;
-  }
+  .nav-logo { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo-img { height: 48px; width: 48px; display: block; object-fit: contain; }
+  .footer-logo .nav-logo-img { height: 42px; width: 42px; }
 
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
     list-style: none;
     flex-wrap: wrap;
     justify-content: center;
@@ -97,43 +79,39 @@
 
   .nav-links a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13.5px;
     color: var(--text-muted);
-    font-weight: 400;
+    font-weight: 500;
     transition: color .15s;
-    letter-spacing: .1px;
   }
-
-  .nav-links a:hover { color: var(--text); }
+  .nav-links a:hover { color: var(--green-deep); }
 
   .nav-cta {
     background: var(--green);
     color: white;
     border: none;
-    padding: 9px 20px;
+    padding: 10px 18px;
     border-radius: 999px;
-    font-size: 14px;
+    font-size: 13.5px;
     font-family: var(--sans);
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     text-decoration: none;
     transition: background .15s, transform .1s;
     display: inline-block;
   }
-
   .nav-cta:hover { background: var(--green-dark); transform: translateY(-1px); }
 
   .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); }
 
-  /* ── HERO ── */
   .hero {
-    min-height: 88vh;
+    min-height: 84vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 80px 40px 80px;
+    padding: 88px 40px 72px;
     position: relative;
     overflow: hidden;
   }
@@ -142,318 +120,270 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 900px 600px at 50% 30%, rgba(29,158,117,0.08) 0%, transparent 70%),
-      radial-gradient(circle 400px at 80% 80%, rgba(29,158,117,0.05) 0%, transparent 60%);
+      radial-gradient(ellipse 900px 560px at 50% 18%, rgba(29,158,117,0.12) 0%, transparent 70%),
+      radial-gradient(circle 420px at 85% 80%, rgba(196,163,90,0.08) 0%, transparent 60%),
+      linear-gradient(180deg, #f7faf8 0%, var(--bg) 100%);
     pointer-events: none;
   }
 
-  .hero > *:not(.hero-bg) {
-    position: relative;
-    z-index: 1;
-  }
+  .hero > *:not(.hero-bg) { position: relative; z-index: 1; }
 
   .hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     background: var(--green-light);
     color: var(--green-dark);
     font-size: 13px;
-    font-weight: 500;
-    padding: 6px 14px;
+    font-weight: 600;
+    padding: 7px 14px;
     border-radius: 999px;
-    margin-bottom: 28px;
-    letter-spacing: .2px;
+    margin-bottom: 26px;
+    border: 1px solid rgba(29,158,117,0.15);
   }
-
-  .hero-badge svg { width: 14px; height: 14px; }
 
   .hero h1 {
     font-family: var(--serif);
-    font-size: clamp(42px, 5.8vw, 76px);
-    line-height: 1.1;
-    max-width: 820px;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.12;
+    max-width: 900px;
     color: var(--text);
-    margin-bottom: 24px;
-    letter-spacing: -.5px;
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--green);
+    margin-bottom: 20px;
+    letter-spacing: -.4px;
   }
 
   .hero-sub {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-muted);
-    max-width: 560px;
+    max-width: 620px;
     line-height: 1.7;
     font-weight: 300;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 
-  .hero-btns {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 
   .btn-primary {
     background: var(--green);
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 14px 26px;
     border-radius: 999px;
-    font-size: 16px;
+    font-size: 15px;
     font-family: var(--sans);
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     transition: background .15s, transform .1s, box-shadow .15s;
-    box-shadow: 0 4px 20px rgba(29,158,117,0.25);
+    box-shadow: 0 6px 22px rgba(29,158,117,0.28);
   }
-
   .btn-primary:hover {
     background: var(--green-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 28px rgba(29,158,117,0.35);
+    box-shadow: 0 8px 28px rgba(29,158,117,0.34);
   }
 
   .btn-outline {
     background: transparent;
     color: var(--text);
     border: 1.5px solid var(--border-med);
-    padding: 15px 30px;
+    padding: 14px 26px;
     border-radius: 999px;
-    font-size: 16px;
+    font-size: 15px;
     font-family: var(--sans);
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    transition: border-color .15s, background .15s, transform .1s;
+    transition: border-color .15s, color .15s, transform .1s;
   }
-
-  .btn-outline:hover {
-    border-color: var(--green);
-    color: var(--green);
-    transform: translateY(-2px);
-  }
+  .btn-outline:hover { border-color: var(--green); color: var(--green-dark); transform: translateY(-2px); }
 
   .hero-stats {
     display: flex;
-    gap: 48px;
-    margin-top: 64px;
-    padding-top: 40px;
+    gap: 44px;
+    margin-top: 56px;
+    padding-top: 32px;
     border-top: 1px solid var(--border);
   }
+  .stat-num { font-family: var(--serif); font-size: 30px; color: var(--green); display: block; line-height: 1; margin-bottom: 4px; }
+  .stat-label { font-size: 13px; color: var(--text-muted); }
 
-  .stat-num {
-    font-family: var(--serif);
-    font-size: 32px;
-    color: var(--green);
-    display: block;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .stat-label {
-    font-size: 13px;
-    color: var(--text-muted);
-    font-weight: 400;
-  }
-
-  /* ── SECTIONS ── */
-  section { padding: 96px 40px; max-width: 1100px; margin: 0 auto; }
-
-  .section-divider {
-    height: 1px;
-    background: var(--border);
-    max-width: 1100px;
-    margin: 0 auto;
-  }
+  section { padding: 88px 40px; max-width: 1100px; margin: 0 auto; }
+  .section-divider { height: 1px; background: var(--border); max-width: 1100px; margin: 0 auto; }
 
   .section-kicker {
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--green);
-    letter-spacing: 1.5px;
+    letter-spacing: 1.4px;
     text-transform: uppercase;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 8px;
   }
-
-  .section-kicker::before {
-    content: '';
-    width: 20px;
-    height: 1.5px;
-    background: var(--green);
-    display: inline-block;
-  }
+  .section-kicker::before { content: ''; width: 18px; height: 1.5px; background: var(--green); display: inline-block; }
 
   .section-title {
     font-family: var(--serif);
-    font-size: clamp(32px, 3.8vw, 50px);
+    font-size: clamp(28px, 3.5vw, 44px);
     line-height: 1.15;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     letter-spacing: -.3px;
   }
-
   .section-sub {
-    font-size: 19px;
+    font-size: 17px;
     color: var(--text-muted);
-    max-width: 560px;
+    max-width: 640px;
     line-height: 1.7;
     font-weight: 300;
   }
 
-  /* ── VALUES ── */
   .values-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: 56px;
+    gap: 14px;
+    margin-top: 48px;
   }
-
   .value-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 28px 24px;
+    padding: 24px 20px;
+    box-shadow: var(--shadow);
     transition: border-color .2s, transform .2s;
   }
-
-  .value-card:hover {
-    border-color: var(--green-mid);
-    transform: translateY(-3px);
-  }
-
+  .value-card:hover { border-color: var(--green-mid); transform: translateY(-3px); }
   .value-icon {
-    width: 44px;
-    height: 44px;
+    width: 42px; height: 42px;
     background: var(--green-light);
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 16px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px;
+    color: var(--green-dark);
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .value-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+  .value-card p { font-size: 14px; color: var(--text-muted); line-height: 1.55; }
+
+  .team-banner {
+    margin-top: 48px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .team-banner img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
   }
 
-  .value-icon svg { width: 22px; height: 22px; color: var(--green-dark); }
-
-  .value-card h3 { font-size: 17px; font-weight: 500; margin-bottom: 8px; }
-  .value-card p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
-
-  /* ── SERVICES ── */
-  .services-wrap { background: var(--bg-section); padding: 96px 0; }
+  .services-wrap { background: var(--bg-section); padding: 88px 0; }
   .services-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
-
   .services-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-top: 56px;
+    gap: 18px;
+    margin-top: 48px;
   }
-
   .service-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 36px;
+    padding: 28px;
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow);
   }
-
   .service-card::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0; left: 0; right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--green), var(--green-mid));
-    z-index: 1;
+    background: linear-gradient(90deg, var(--green), var(--gold));
   }
-
   .service-tag {
     display: inline-block;
     font-size: 11px;
-    font-weight: 500;
-    letter-spacing: .8px;
+    font-weight: 600;
+    letter-spacing: .7px;
     text-transform: uppercase;
     color: var(--green-dark);
     background: var(--green-light);
     padding: 4px 10px;
     border-radius: 999px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
-
   .service-card h3 {
     font-family: var(--serif);
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     line-height: 1.25;
   }
-
+  .service-card > p {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
   .service-card ul { list-style: none; }
-
   .service-card ul li {
     font-size: 14px;
     color: var(--text-muted);
-    padding: 8px 0;
+    padding: 7px 0;
     border-bottom: 1px solid var(--border);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
   }
-
   .service-card ul li:last-child { border-bottom: none; }
-
   .service-card ul li::before {
     content: '';
-    width: 6px;
-    height: 6px;
+    width: 6px; height: 6px;
     border-radius: 50%;
     background: var(--green);
     flex-shrink: 0;
+    margin-top: 7px;
   }
 
-  /* ── ELIGIBILITY ── */
   .elig-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 56px;
+    gap: 28px;
+    margin-top: 40px;
     align-items: start;
   }
-
-  .elig-form-box {
+  .elig-form-box, .elig-result-box {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 36px;
+    padding: 28px;
+    box-shadow: var(--shadow);
   }
-
-  .elig-field { margin-bottom: 18px; }
-
+  .elig-result-box {
+    background: linear-gradient(180deg, #e8f7f1 0%, #f4fbf8 100%);
+    border-color: var(--green-mid);
+    position: sticky;
+    top: 88px;
+  }
+  .elig-field { margin-bottom: 16px; }
   .elig-field label {
     display: block;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 11px;
+    font-weight: 600;
     color: var(--text-muted);
     margin-bottom: 6px;
-    letter-spacing: .2px;
+    letter-spacing: .3px;
     text-transform: uppercase;
   }
-
-  .elig-field select,
-  .elig-field input {
+  .elig-field select, .elig-field input {
     width: 100%;
-    padding: 10px 14px;
+    padding: 11px 14px;
     border: 1px solid var(--border-med);
     border-radius: var(--radius-sm);
     font-family: var(--sans);
@@ -462,80 +392,53 @@
     background: var(--bg);
     appearance: none;
     -webkit-appearance: none;
-    transition: border-color .15s, box-shadow .15s;
     outline: none;
+    transition: border-color .15s, box-shadow .15s;
   }
-
   .elig-field select {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235a5a56' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 12px center;
     padding-right: 36px;
   }
-
-  .elig-field select:focus,
-  .elig-field input:focus {
+  .elig-field select:focus, .elig-field input:focus {
     border-color: var(--green);
     box-shadow: 0 0 0 3px rgba(29,158,117,0.12);
   }
-
-  .elig-result-box {
-    background: var(--green-light);
-    border: 1px solid var(--green-mid);
-    border-radius: var(--radius);
-    padding: 36px;
-    position: sticky;
-    top: 84px;
-  }
-
   .elig-result-box h4 {
     font-family: var(--serif);
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 4px;
     color: var(--green-deep);
   }
-
-  .elig-result-sub {
-    font-size: 13px;
-    color: var(--green-dark);
-    margin-bottom: 24px;
-    font-weight: 300;
-  }
-
+  .elig-result-sub { font-size: 13px; color: var(--green-dark); margin-bottom: 20px; }
   .benefit-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     padding: 12px 0;
     border-bottom: 1px solid rgba(29,158,117,0.15);
     font-size: 14px;
     color: var(--green-deep);
     font-weight: 500;
   }
-
   .benefit-row:last-of-type { border-bottom: none; }
-
-  .badge {
-    font-size: 11px;
-    font-weight: 500;
-    padding: 4px 10px;
-    border-radius: 999px;
-  }
-
+  .benefit-meta { text-align: right; }
+  .benefit-amount { display: block; font-size: 13px; font-weight: 600; color: var(--green-dark); margin-top: 4px; }
+  .badge { font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 999px; display: inline-block; }
   .badge-likely { background: var(--green); color: white; }
   .badge-check { background: var(--amber-light); color: #854F0B; border: 1px solid rgba(185,117,23,0.2); }
   .badge-no { background: rgba(0,0,0,0.06); color: var(--text-faint); }
-
   .elig-note {
     font-size: 12px;
     color: var(--green-dark);
-    margin-top: 20px;
-    padding-top: 16px;
+    margin-top: 16px;
+    padding-top: 14px;
     border-top: 1px solid rgba(29,158,117,0.15);
-    line-height: 1.6;
+    line-height: 1.55;
     font-style: italic;
   }
-
   .btn-primary-full {
     width: 100%;
     background: var(--green);
@@ -545,195 +448,195 @@
     border-radius: var(--radius-sm);
     font-family: var(--sans);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
-    margin-top: 24px;
+    margin-top: 18px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
     transition: background .15s;
   }
-
   .btn-primary-full:hover { background: var(--green-dark); }
 
-  /* ── PARTNERS ── */
   .partners-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 56px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 48px;
   }
-
   .partner-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 28px;
-    transition: border-color .2s, transform .2s;
-  }
-
-  .partner-card:hover { border-color: var(--green-mid); transform: translateY(-2px); }
-
-  .partner-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
-    background: var(--green-light);
+    padding: 28px 20px;
+    min-height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
-    color: var(--green-dark);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .4px;
+    box-shadow: var(--shadow);
+    transition: border-color .2s, transform .2s;
   }
+  .partner-card:hover { border-color: var(--green-mid); transform: translateY(-2px); }
+  .partner-card img {
+    max-height: 72px;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+  .partner-cta { margin-top: 28px; }
 
-  .partner-card h4 { font-size: 16px; font-weight: 500; margin-bottom: 8px; line-height: 1.4; }
-  .partner-card p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
-
-  /* ── BOARD ── */
-  .board-wrap { background: var(--bg-section); padding: 96px 0; }
-  .board-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+  .board-wrap, .advisors-wrap, .contact-wrap { background: var(--bg-section); padding: 88px 0; }
+  .board-inner, .advisors-inner, .contact-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
 
   .board-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 56px;
+    gap: 18px;
+    margin-top: 48px;
   }
-
   .board-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 28px;
+    padding: 22px;
+    box-shadow: var(--shadow);
     transition: border-color .2s, transform .2s;
   }
-
   .board-card:hover { border-color: var(--green-mid); transform: translateY(-2px); }
-
-  .avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: var(--green-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--green-dark);
-    flex-shrink: 0;
+  .board-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 12px;
     margin-bottom: 14px;
+    background: var(--green-light);
   }
-
-  .board-name { font-size: 15px; font-weight: 500; margin-bottom: 3px; }
-  .board-role { font-size: 12px; color: var(--green); font-weight: 500; letter-spacing: .1px; margin-bottom: 12px; }
-  .board-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px; }
-
+  .board-name { font-size: 16px; font-weight: 600; margin-bottom: 3px; }
+  .board-role { font-size: 12px; color: var(--green); font-weight: 600; margin-bottom: 10px; }
+  .board-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px; }
   .board-email {
     font-size: 12px;
     color: var(--text-faint);
     text-decoration: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 5px;
     transition: color .15s;
   }
-
   .board-email:hover { color: var(--green); }
-  .board-email svg { width: 13px; height: 13px; flex-shrink: 0; }
+  .board-email svg { width: 13px; height: 13px; }
 
-  /* ── EVENTS ── */
+  .advisor-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-top: 40px;
+    box-shadow: var(--shadow);
+    align-items: start;
+  }
+  .advisor-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .advisor-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .advisor-mini {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .events-photo {
+    margin-top: 36px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .events-photo img { width: 100%; height: 280px; object-fit: cover; display: block; }
+
   .events-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 48px;
+    margin-top: 36px;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     overflow: hidden;
+    background: var(--bg-card);
+    box-shadow: var(--shadow);
   }
-
   .events-table thead th {
     background: var(--bg-section);
-    padding: 16px 20px;
-    font-size: 13px;
-    font-weight: 500;
+    padding: 14px 18px;
+    font-size: 12px;
+    font-weight: 600;
     color: var(--text-muted);
     text-align: left;
-    letter-spacing: .5px;
+    letter-spacing: .4px;
     text-transform: uppercase;
     border-bottom: 1px solid var(--border);
   }
-
   .events-table tbody td {
-    padding: 18px 20px;
-    font-size: 16px;
+    padding: 16px 18px;
+    font-size: 15px;
     border-bottom: 1px solid var(--border);
     vertical-align: middle;
   }
-
   .events-table tbody tr:last-child td { border-bottom: none; }
-  .events-table tbody tr:hover { background: var(--bg-section); }
-
-  .event-name { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+  .events-table tbody tr:hover { background: #f7faf8; }
+  .event-name { display: flex; align-items: center; gap: 10px; font-weight: 600; }
   .event-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
-
   .event-type-badge {
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--green-dark);
     background: var(--green-light);
     padding: 3px 8px;
     border-radius: 999px;
-    display: inline-block;
   }
-
-  /* ── CONTACT ── */
-  .contact-wrap { background: var(--bg-section); padding: 96px 0; }
-  .contact-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
 
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 56px;
+    gap: 16px;
+    margin-top: 48px;
   }
-
   .contact-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 28px;
-    transition: border-color .2s, transform .2s;
+    padding: 24px;
     text-decoration: none;
     color: inherit;
     display: block;
-    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: border-color .2s, transform .2s;
   }
-
   .contact-card:hover { border-color: var(--green-mid); transform: translateY(-2px); }
-
   .contact-card-icon {
-    width: 44px;
-    height: 44px;
+    width: 42px; height: 42px;
     border-radius: 10px;
     background: var(--green-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 16px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px;
+    color: var(--green-dark);
   }
-
-  .contact-card-icon svg { width: 22px; height: 22px; color: var(--green-dark); }
-  .contact-card h4 { font-size: 17px; font-weight: 500; margin-bottom: 6px; }
-  .contact-card p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
-
-  .contact-direct {
-    display: flex;
-    gap: 16px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-  }
-
+  .contact-card-icon svg { width: 20px; height: 20px; }
+  .contact-card h4 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .contact-card p { font-size: 14px; color: var(--text-muted); line-height: 1.55; }
+  .contact-direct { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
   .contact-link {
     display: flex;
     align-items: center;
@@ -743,109 +646,76 @@
     text-decoration: none;
     background: var(--bg-card);
     border: 1px solid var(--border);
-    padding: 10px 18px;
+    padding: 10px 16px;
     border-radius: 999px;
     transition: border-color .15s, color .15s;
   }
-
   .contact-link:hover { border-color: var(--green); color: var(--green); }
   .contact-link svg { width: 16px; height: 16px; }
 
-  /* ── FOOTER ── */
   footer {
     border-top: 1px solid var(--border);
-    padding: 40px;
+    padding: 36px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 16px;
-    max-width: 100%;
   }
-
-  .footer-logo {
-    font-family: var(--serif);
-    font-size: 18px;
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-  }
-
+  .footer-logo { text-decoration: none; display: flex; align-items: center; gap: 10px; }
   .footer-copy { font-size: 13px; color: var(--text-faint); }
-
-  .footer-links {
-    display: flex;
-    gap: 24px;
-    list-style: none;
-  }
-
+  .footer-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
   .footer-links a {
     font-size: 13px;
     color: var(--text-faint);
     text-decoration: none;
     transition: color .15s;
   }
-
   .footer-links a:hover { color: var(--green); }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    nav { padding: 0 20px; }
+  @media (max-width: 960px) {
+    nav { padding: 0 18px; }
     .nav-links { display: none; }
     .nav-links.open {
       display: flex;
       flex-direction: column;
       position: absolute;
-      top: 64px;
-      left: 0;
-      right: 0;
+      top: 68px; left: 0; right: 0;
       background: var(--bg);
       border-bottom: 1px solid var(--border);
-      padding: 16px 20px 20px;
-      gap: 16px;
+      padding: 16px 18px 20px;
+      gap: 14px;
       z-index: 199;
     }
     .nav-mobile-toggle { display: block; }
-    section, .services-inner, .board-inner, .contact-inner { padding: 64px 20px; }
-    .hero { padding: 60px 20px; min-height: auto; }
-    .hero-stats { gap: 24px; flex-wrap: wrap; justify-content: center; }
-    .values-grid { grid-template-columns: 1fr 1fr; }
-    .services-grid { grid-template-columns: 1fr; }
-    .elig-container { grid-template-columns: 1fr; }
+    section, .services-inner, .board-inner, .advisors-inner, .contact-inner { padding-left: 20px; padding-right: 20px; }
+    .hero { padding: 56px 20px; min-height: auto; }
+    .hero-stats { gap: 22px; flex-wrap: wrap; justify-content: center; }
+    .values-grid, .services-grid, .partners-grid, .board-grid, .contact-grid, .advisor-list { grid-template-columns: 1fr 1fr; }
+    .elig-container, .advisor-card { grid-template-columns: 1fr; }
     .elig-result-box { position: static; }
-    .partners-grid { grid-template-columns: 1fr 1fr; }
-    .board-grid { grid-template-columns: 1fr 1fr; }
-    .contact-grid { grid-template-columns: 1fr; }
-    footer { flex-direction: column; align-items: flex-start; padding: 32px 20px; }
-    .footer-links { flex-wrap: wrap; gap: 16px; }
+    footer { flex-direction: column; align-items: flex-start; padding: 28px 20px; }
   }
 
-  @media (max-width: 540px) {
-    .values-grid { grid-template-columns: 1fr; }
-    .partners-grid { grid-template-columns: 1fr; }
-    .board-grid { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 32px; }
-    .section-title { font-size: 26px; }
+  @media (max-width: 560px) {
+    .values-grid, .services-grid, .partners-grid, .board-grid, .contact-grid, .advisor-list { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 30px; }
+    .team-banner img, .events-photo img { height: 220px; }
   }
 
-  /* ── ANIMATIONS ── */
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(18px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
   .hero-badge { animation: fadeUp .5s ease both; }
-  .hero h1 { animation: fadeUp .5s .1s ease both; }
-  .hero-sub { animation: fadeUp .5s .2s ease both; }
-  .hero-btns { animation: fadeUp .5s .3s ease both; }
-  .hero-stats { animation: fadeUp .5s .4s ease both; }
+  .hero h1 { animation: fadeUp .5s .08s ease both; }
+  .hero-sub { animation: fadeUp .5s .16s ease both; }
+  .hero-btns { animation: fadeUp .5s .24s ease both; }
+  .hero-stats { animation: fadeUp .5s .32s ease both; }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#home" class="nav-logo">
     <img src="care-logo.png" alt="CARE — Community Access &amp; Resilience Education" class="nav-logo-img" width="48" height="48">
@@ -857,6 +727,7 @@
     <li><a href="#eligibility">Eligibility</a></li>
     <li><a href="#partnerships">Partnerships</a></li>
     <li><a href="#board">Board</a></li>
+    <li><a href="#advisors">Advisors</a></li>
     <li><a href="#events">Events</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -868,119 +739,128 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <div id="home">
   <div class="hero">
     <div class="hero-bg"></div>
-    <div class="hero-badge">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-      Serving underserved communities
-    </div>
-    <h1>Bridging the gap between food insecurity, healthcare access, and preventive medicine</h1>
-    <p class="hero-sub">CARE helps underserved communities with preventive health education, enrollment support, and nutrition resources.</p>
+    <div class="hero-badge">Community Access &amp; Resilience Education</div>
+    <h1>Breaking the cycle between food insecurity, healthcare access, and preventable disease</h1>
+    <p class="hero-sub">CARE walks alongside underserved individuals as they navigate healthcare, nutrition, and benefits — not just pointing to resources, but getting people there.</p>
     <div class="hero-btns">
       <a href="#eligibility" class="btn-primary">Get Assistance</a>
       <a href="#contact" class="btn-outline">Volunteer With Us</a>
     </div>
     <div class="hero-stats">
       <div>
-        <span class="stat-num">Free</span>
-        <span class="stat-label">Education Workshops</span>
+        <span class="stat-num">4</span>
+        <span class="stat-label">Integrated pillars</span>
       </div>
       <div>
-        <span class="stat-num">4+</span>
-        <span class="stat-label">Community Partners</span>
+        <span class="stat-num">6</span>
+        <span class="stat-label">Community partners</span>
       </div>
       <div>
-        <span class="stat-num">2</span>
-        <span class="stat-label">Benefit Programs Supported</span>
+        <span class="stat-num">LA</span>
+        <span class="stat-label">Community focused</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- MISSION / ABOUT -->
 <section id="about">
-  <div class="section-kicker">Our mission</div>
-  <h2 class="section-title">Everyone Deserves Access to Healthcare</h2>
-  <p class="section-sub">By combining education, enrollment assistance, and community outreach, CARE aims to reduce long-term health disparities and help individuals build healthier futures.</p>
+  <div class="section-kicker">Our Goal</div>
+  <h2 class="section-title">Interrupt the Cycle Before Crisis Strikes</h2>
+  <p class="section-sub">Food insecurity and limited healthcare access compound each other. Through Enrollment Assistance, Education Outreach, Digital Literacy, and Transportation, CARE turns “you're eligible” into “you're enrolled, informed, and able to show up.”</p>
   <div class="values-grid">
     <div class="value-card">
-      <div class="value-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
-      </div>
+      <div class="value-icon">01</div>
       <h3>Nutritious Food</h3>
-      <p>Access to food assistance programs and nutrition resources for all households.</p>
+      <p>Access to food assistance and nutrition support that households can actually use.</p>
     </div>
     <div class="value-card">
-      <div class="value-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-      </div>
+      <div class="value-icon">02</div>
       <h3>Preventive Care</h3>
-      <p>Free educational workshops focused on preventive healthcare and wellness.</p>
+      <p>Education people can act on — screenings, wellness, and early detection.</p>
     </div>
     <div class="value-card">
-      <div class="value-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      </div>
-      <h3>Healthcare Navigation</h3>
-      <p>Support to understand and navigate complex healthcare systems with confidence.</p>
+      <div class="value-icon">03</div>
+      <h3>Clear Navigation</h3>
+      <p>A practical path through healthcare and benefits systems.</p>
     </div>
     <div class="value-card">
-      <div class="value-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M9 8H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-4"/><path d="M12 13v4M10 15h4"/></svg>
-      </div>
-      <h3>Enrollment Support</h3>
-      <p>Hands-on assistance enrolling in healthcare and food assistance programs.</p>
+      <div class="value-icon">04</div>
+      <h3>Getting There</h3>
+      <p>Help enrolling and support getting to appointments and offices.</p>
     </div>
+  </div>
+  <div class="team-banner">
+    <img src="assets/team/team-photo.jpg" alt="CARE team photo" width="1100" height="320" loading="lazy">
   </div>
 </section>
 
-<div class="section-divider"></div>
-
-<!-- SERVICES -->
 <div class="services-wrap" id="services">
   <div class="services-inner">
     <div class="section-kicker">Services</div>
-    <h2 class="section-title">How CARE Helps</h2>
-    <p class="section-sub">All programs are designed to be accessible, culturally sensitive, and community-focused.</p>
+    <h2 class="section-title">Four Pillars of Support</h2>
+    <p class="section-sub">Programs designed to be accessible, culturally sensitive, and community-focused.</p>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-tag">Education</div>
-        <h3>Preventive Health Workshops</h3>
+        <div class="service-tag">Pillar 1</div>
+        <h3>Enrollment Assistance</h3>
+        <p>We help people navigate and enroll in benefits they already qualify for.</p>
         <ul>
-          <li>Preventive healthcare</li>
+          <li>Medi-Cal and Medicare enrollment</li>
+          <li>CalFresh applications and renewals</li>
+          <li>Eligibility requirements and documents</li>
+          <li>Connections to local food resources</li>
+        </ul>
+        <div style="margin-top:20px">
+          <a href="#eligibility" class="btn-primary" style="font-size:14px;padding:10px 20px">Check Your Eligibility</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-tag">Pillar 2</div>
+        <h3>Education Outreach</h3>
+        <p>Free workshops brought to shelters, schools, and community centers.</p>
+        <ul>
+          <li>Preventive healthcare and early detection</li>
           <li>Digestive and colon health</li>
-          <li>Nutrition and wellness</li>
-          <li>Understanding body signals and symptoms</li>
-          <li>Women's health</li>
-          <li>Navigating the healthcare system</li>
+          <li>Nutrition and healthy lifestyle habits</li>
+          <li>Women's health and healthcare navigation</li>
+          <li>Clinic referral list and info booklet</li>
         </ul>
       </div>
       <div class="service-card">
-        <div class="service-tag">Enrollment</div>
-        <h3>CalFresh &amp; Medi-Cal Enrollment</h3>
+        <div class="service-tag">Pillar 3</div>
+        <h3>Digital Literacy Program</h3>
+        <p>Closing the gap when barriers to care happen online first.</p>
         <ul>
-          <li>CalFresh enrollment</li>
-          <li>Medi-Cal enrollment</li>
-          <li>Benefit renewals</li>
-          <li>Application guidance</li>
-          <li>Understanding eligibility requirements</li>
+          <li>Step-by-step Medi-Cal and CalFresh online applications</li>
+          <li>Scam awareness for healthcare and benefits fraud</li>
+          <li>Telehealth setup and virtual appointment literacy</li>
         </ul>
-        <div style="margin-top:24px">
-          <a href="#eligibility" class="btn-primary" style="font-size:15px;padding:11px 24px">Check Your Eligibility</a>
+      </div>
+      <div class="service-card">
+        <div class="service-tag">Pillar 4</div>
+        <h3>Community Transportation</h3>
+        <p>Approved benefits mean nothing if someone can't physically get there.</p>
+        <ul>
+          <li>LA Metro LIFE Program enrollment support</li>
+          <li>$11 Metro taxi vouchers via CCSI</li>
+          <li>Navigator Model: accompany or coordinate rides to SSA, Medi-Cal, interviews, and medical visits</li>
+        </ul>
+        <div style="margin-top:20px">
+          <a href="mailto:carehealthproject@gmail.com?subject=Request%20a%20Ride%20Escort" class="btn-outline" style="font-size:14px;padding:10px 20px">Request a Ride Escort</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ELIGIBILITY -->
 <section id="eligibility">
-  <div class="section-kicker">Eligibility assessment</div>
+  <div class="section-kicker">Eligibility Assessment</div>
   <h2 class="section-title">Find Out What Benefits You May Qualify For</h2>
-  <p class="section-sub">Answer a few quick questions and see which programs you may be eligible for — then visit a CARE site for personalized help.</p>
-  <div style="margin-top:28px">
+  <p class="section-sub">Answer a few questions for estimated eligibility and potential benefit ranges — then visit a CARE site for personalized help.</p>
+  <div style="margin-top:24px">
     <button type="button" class="btn-primary" id="start-elig-btn">Start Eligibility Assessment</button>
   </div>
   <div class="elig-container">
@@ -1033,218 +913,209 @@
           <option value="no">Other</option>
         </select>
       </div>
-      <a href="#contact" class="btn-primary-full" style="display:block;text-align:center;text-decoration:none">Speak With CARE for Personalized Help →</a>
+      <a href="#contact" class="btn-primary-full">Speak With CARE for Personalized Help →</a>
     </div>
     <div class="elig-result-box">
-      <h4>Estimated eligibility</h4>
-      <p class="elig-result-sub">Based on your responses</p>
-      <div id="elig-rows">
-        <div class="benefit-row"><span>CalFresh</span><span class="badge badge-likely">Likely eligible</span></div>
-        <div class="benefit-row"><span>Medi-Cal</span><span class="badge badge-likely">Likely eligible</span></div>
-        <div class="benefit-row"><span>Other programs</span><span class="badge badge-check">Check with CARE</span></div>
-      </div>
-      <p class="elig-note">This is an estimate only. Eligibility depends on additional factors. Visit a CARE enrollment site for personalized assistance and support.</p>
+      <h4>Estimated Eligibility</h4>
+      <p class="elig-result-sub">Based on your responses · benefit ranges are estimates only</p>
+      <div id="elig-rows"></div>
+      <p class="elig-note">Estimates only. Actual eligibility and benefit amounts depend on additional factors. Visit a CARE enrollment site for personalized assistance.</p>
     </div>
   </div>
 </section>
 
 <div class="section-divider"></div>
 
-<!-- PARTNERSHIPS -->
 <section id="partnerships">
   <div class="section-kicker">Partnerships</div>
   <h2 class="section-title">Community Partners</h2>
-  <p class="section-sub">CARE works alongside trusted organizations to expand healthcare accessibility and community support.</p>
+  <p class="section-sub">CARE's impact comes from organizations who trust us to serve their communities alongside them.</p>
   <div class="partners-grid">
-    <div class="partner-card">
-      <div class="partner-icon">CCSC</div>
-      <h4>Chinese Community Service Center</h4>
-      <p>Community resources and support services for underserved populations.</p>
-    </div>
-    <div class="partner-card">
-      <div class="partner-icon">CPAF</div>
-      <h4>Center for the Pacific Asian Families</h4>
-      <p>Emergency and transitional shelter programs supporting survivors and families in crisis.</p>
-    </div>
-    <div class="partner-card">
-      <div class="partner-icon">CCA</div>
-      <h4>Colorectal Cancer Alliance</h4>
-      <p>Colorectal cancer awareness, education, and preventive screening advocacy.</p>
-    </div>
-    <div class="partner-card">
-      <div class="partner-icon">LAM</div>
-      <h4>Los Angeles Mission</h4>
-      <p>Meals, shelter, and outreach supporting neighbors experiencing homelessness and poverty in Los Angeles.</p>
-    </div>
+    <div class="partner-card"><img src="assets/partners/ccsi.png" alt="Central Community Services Inc" loading="lazy"></div>
+    <div class="partner-card"><img src="assets/partners/cpaf.webp" alt="Center for the Pacific Asian Families" loading="lazy"></div>
+    <div class="partner-card"><img src="assets/partners/la-missions.jpg" alt="LA Mission" loading="lazy"></div>
+    <div class="partner-card"><img src="assets/partners/ccnp.png" alt="LA CCNP" loading="lazy"></div>
+    <div class="partner-card"><img src="assets/partners/cca.webp" alt="Colorectal Cancer Alliance" loading="lazy"></div>
+    <div class="partner-card"><img src="assets/partners/medica-zone.png" alt="The Medica Zone USC Chapter" loading="lazy"></div>
   </div>
+  <p class="partner-cta section-sub">Interested in partnering with CARE? <a href="mailto:carehealthproject@gmail.com?subject=Partnership%20Inquiry" style="color:var(--green-dark);font-weight:600">Reach out here.</a></p>
 </section>
 
-<!-- BOARD -->
 <div class="board-wrap" id="board">
   <div class="board-inner">
-    <div class="section-kicker">Board of directors</div>
+    <div class="section-kicker">Board of Directors</div>
     <h2 class="section-title">Meet the Team</h2>
-    <p class="section-sub">Our board leads CARE's mission with expertise in healthcare enrollment, education, communications, and community engagement.</p>
+    <p class="section-sub">Our board leads CARE's four pillars — enrollment, education, digital literacy, and transportation.</p>
     <div class="board-grid">
       <div class="board-card">
-        <div class="avatar">ST</div>
+        <img class="board-photo" src="assets/team/sophie-tan.jpg" alt="Sophie Tan" loading="lazy">
         <div class="board-name">Sophie Tan</div>
         <div class="board-role">President</div>
-        <p class="board-desc">Oversees the overall vision, direction, and growth of CARE. Leads strategic planning and ensures all initiatives align with CARE's mission of improving preventive healthcare access.</p>
-        <a href="mailto:sophiet@usc.edu" class="board-email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          sophiet@usc.edu
-        </a>
+        <p class="board-desc">Oversees CARE's vision, partnerships, and strategic planning across enrollment, education, digital literacy, and transportation.</p>
+        <a href="mailto:sophiet@usc.edu" class="board-email">sophiet@usc.edu</a>
       </div>
       <div class="board-card">
-        <div class="avatar">EK</div>
+        <img class="board-photo" src="assets/team/ellen-kim.jpg" alt="Ellen Kim" loading="lazy">
         <div class="board-name">Ellen Kim</div>
         <div class="board-role">VP of Enrollment Outreach</div>
-        <p class="board-desc">Leads efforts to increase access to Medi-Cal and CalFresh. Builds partnerships with clinics and food pantries to support enrollment services and expand access to preventive care.</p>
-        <a href="mailto:ellenhki@usc.edu" class="board-email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          ellenhki@usc.edu
-        </a>
+        <p class="board-desc">Expands Medi-Cal and CalFresh access, builds clinic and pantry partnerships, and initiated CARE's Digital Literacy Program.</p>
+        <a href="mailto:ellenhki@usc.edu" class="board-email">ellenhki@usc.edu</a>
       </div>
       <div class="board-card">
-        <div class="avatar">RK</div>
+        <img class="board-photo" src="assets/team/ryan-kim.jpg" alt="Ryan Kim" loading="lazy">
         <div class="board-name">Ryan Kim</div>
         <div class="board-role">VP of Educational Outreach</div>
-        <p class="board-desc">Develops CARE's health education curriculum. Leads workshops on preventive care, digestive health, and healthcare navigation while ensuring materials remain accessible and culturally sensitive.</p>
-        <a href="mailto:rkim8149@usc.edu" class="board-email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          rkim8149@usc.edu
-        </a>
+        <p class="board-desc">Designs CARE's health education curriculum, coordinates outreach to schools and shelters, and manages social media.</p>
+        <a href="mailto:rkim8149@usc.edu" class="board-email">rkim8149@usc.edu</a>
       </div>
       <div class="board-card">
-        <div class="avatar">ML</div>
+        <img class="board-photo" src="assets/team/miriam-lee.jpg" alt="Miriam Lee" loading="lazy">
         <div class="board-name">Miriam Lee</div>
         <div class="board-role">Secretary</div>
-        <p class="board-desc">Maintains organization and communication within CARE. Records meeting notes, manages internal documents, tracks attendance, and supports coordination across all teams.</p>
-        <a href="mailto:miriamjl@usc.edu" class="board-email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          miriamjl@usc.edu
-        </a>
+        <p class="board-desc">Maintains organization and communication — meeting notes, documents, attendance, and cross-team coordination.</p>
+        <a href="mailto:miriamjl@usc.edu" class="board-email">miriamjl@usc.edu</a>
       </div>
       <div class="board-card">
-        <div class="avatar">ZC</div>
+        <img class="board-photo" src="assets/team/zach-chang.jpg" alt="Zach Chang" loading="lazy">
         <div class="board-name">Zach Chang</div>
-        <div class="board-role">Director of Communications &amp; Operations</div>
-        <p class="board-desc">Oversees public outreach and operational management. Leads social media strategy, content creation, promotional campaigns, budgeting, and fundraising coordination.</p>
-        <a href="mailto:zjchang@usc.edu" class="board-email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          zjchang@usc.edu
-        </a>
+        <div class="board-role">Treasurer</div>
+        <p class="board-desc">Oversees internal operations, budgeting, expense tracking, and fundraising coordination.</p>
+        <a href="mailto:zjchang@usc.edu" class="board-email">zjchang@usc.edu</a>
       </div>
       <div class="board-card">
-        <div class="avatar">JK</div>
+        <img class="board-photo" src="assets/team/joshua-koh.jpg" alt="Joshua Koh" loading="lazy">
         <div class="board-name">Joshua Koh</div>
         <div class="board-role">Director of Programs &amp; Community Engagement</div>
-        <p class="board-desc">Oversees planning and execution of CARE events, workshops, and outreach sessions. Manages program logistics, scheduling, and maintains strong relationships with community partners.</p>
-        <a href="mailto:jkkoh@usc.edu" class="board-email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          jkkoh@usc.edu
-        </a>
+        <p class="board-desc">Plans events and workshops, and coordinates logistics, scheduling, materials, and on-site operations.</p>
+        <a href="mailto:jkkoh@usc.edu" class="board-email">jkkoh@usc.edu</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- EVENTS -->
+<div class="advisors-wrap" id="advisors">
+  <div class="advisors-inner">
+    <div class="section-kicker">Advisors Team</div>
+    <h2 class="section-title">Faculty &amp; Mentors</h2>
+    <p class="section-sub">Guidance from researchers and community partners who shape CARE's model.</p>
+    <div class="advisor-card">
+      <img src="assets/team/jane-lee.jpg" alt="Dr. Jane Lee" loading="lazy">
+      <div>
+        <div class="board-name">Dr. Jane Lee</div>
+        <div class="board-role">Faculty Advisor · Associate Professor, USC Suzanne Dworak-Peck School of Social Work</div>
+        <p class="board-desc">Dr. Lee's research addresses health disparities among racial, ethnic minority, and immigrant populations, with a focus on how migration-related processes shape health behaviors and access to care. Her community-based approach informs CARE's model of walking alongside the people we serve.</p>
+        <a href="mailto:jlee6288@usc.edu" class="board-email">jlee6288@usc.edu</a>
+      </div>
+    </div>
+    <div class="advisor-list">
+      <div class="advisor-mini">
+        <div class="board-name">Kevin Ji</div>
+        <div class="board-role">Advisor</div>
+        <p class="board-desc">Supporting CARE's mission and community programs.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <section id="events">
-  <div class="section-kicker">Events &amp; schedule</div>
+  <div class="section-kicker">Events &amp; Schedule</div>
   <h2 class="section-title">Upcoming Outreach Events</h2>
-  <p class="section-sub">Join us for community health workshops, enrollment drives, and food distribution partnerships.</p>
+  <p class="section-sub">Enrollment drives, health workshops, digital literacy sessions, and food distribution partnerships.</p>
+  <div class="events-photo">
+    <img src="assets/photos/ccsi-outing.jpg" alt="CARE community outing with CCSI" loading="lazy">
+  </div>
   <table class="events-table">
     <thead>
       <tr>
         <th>Date</th>
+        <th>Time</th>
         <th>Event</th>
-        <th>Type</th>
         <th>Location</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="color:var(--text-muted);font-size:15px">June 1, 2026</td>
-        <td><div class="event-name"><div class="event-dot"></div>Food Distribution Event</div></td>
-        <td><span class="event-type-badge">Distribution</span></td>
-        <td style="color:var(--text-muted);font-size:15px">1725 Beverly Blvd, Los Angeles, CA 90026</td>
+        <td style="color:var(--text-muted)">September 11, 2026</td>
+        <td style="color:var(--text-muted)">6:00 PM</td>
+        <td><div class="event-name"><div class="event-dot"></div>Enrollment Drive</div></td>
+        <td>MacArthur Park</td>
       </tr>
       <tr>
-        <td style="color:var(--text-muted);font-size:15px">June 12, 2026</td>
-        <td><div class="event-name"><div class="event-dot"></div>CARE Enrollment Drive</div></td>
-        <td><span class="event-type-badge">Enrollment</span></td>
-        <td style="color:var(--text-muted);font-size:15px">303 E 5th St, Los Angeles, CA 90013</td>
+        <td style="color:var(--text-muted)">September 12, 2026</td>
+        <td style="color:var(--text-muted)">12:00–2:00 PM</td>
+        <td><div class="event-name"><div class="event-dot"></div>Enrollment Drive</div></td>
+        <td>LA Mission</td>
+      </tr>
+      <tr>
+        <td style="color:var(--text-muted)">September 15, 2026</td>
+        <td style="color:var(--text-muted)">1:00–2:00 PM</td>
+        <td><div class="event-name"><div class="event-dot"></div>Health Workshop</div></td>
+        <td>CPAF Shelter</td>
+      </tr>
+      <tr>
+        <td style="color:var(--text-muted)">October 10, 2026</td>
+        <td style="color:var(--text-muted)">10:00 AM–1:00 PM</td>
+        <td><div class="event-name"><div class="event-dot"></div>Annual Health Fair</div></td>
+        <td>CCNP</td>
       </tr>
     </tbody>
   </table>
 </section>
 
-<!-- CONTACT -->
 <div class="contact-wrap" id="contact">
   <div class="contact-inner">
     <div class="section-kicker">Contact</div>
     <h2 class="section-title">Get Involved</h2>
     <p class="section-sub">Interested in volunteering, partnering, or receiving assistance? We'd love to hear from you.</p>
     <div class="contact-grid">
-      <a href="mailto:carecommunityhealth@gmail.com?subject=Volunteer%20Interest" class="contact-card">
-        <div class="contact-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
+      <a href="mailto:carehealthproject@gmail.com?subject=Volunteer%20Interest" class="contact-card">
+        <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <h4>Volunteer Opportunities</h4>
-        <p>Join our outreach team and make a direct impact in underserved communities.</p>
+        <p>Join outreach, enrollment support, education, and Navigator rides.</p>
       </a>
-      <a href="mailto:carecommunityhealth@gmail.com?subject=Partnership%20Inquiry" class="contact-card">
-        <div class="contact-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
+      <a href="mailto:carehealthproject@gmail.com?subject=Partnership%20Inquiry" class="contact-card">
+        <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <h4>Community Partnerships</h4>
-        <p>Partner with CARE to expand healthcare accessibility in your community.</p>
+        <p>Partner with CARE to expand healthcare access in your community.</p>
       </a>
-      <a href="mailto:carecommunityhealth@gmail.com?subject=Donation%20or%20Sponsorship" class="contact-card">
-        <div class="contact-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </div>
+      <a href="mailto:carehealthproject@gmail.com?subject=Donation%20or%20Sponsorship" class="contact-card">
+        <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
         <h4>Donations &amp; Sponsorships</h4>
-        <p>Support CARE's mission through financial contributions and sponsorships.</p>
+        <p>Support rides, workshops, and enrollment outreach. Email us to give.</p>
       </a>
       <a href="#eligibility" class="contact-card">
-        <div class="contact-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
+        <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
         <h4>Enrollment Assistance</h4>
-        <p>Get in-person help enrolling in CalFresh, Medi-Cal, and other benefit programs.</p>
+        <p>Get help with CalFresh, Medi-Cal, and related benefit programs.</p>
       </a>
     </div>
-    <div style="margin-top:32px;text-align:center">
-      <a href="mailto:carecommunityhealth@gmail.com?subject=Contact%20CARE" class="btn-primary">Contact CARE</a>
+    <div style="margin-top:28px;text-align:center">
+      <a href="mailto:carehealthproject@gmail.com?subject=Contact%20CARE" class="btn-primary">Contact CARE</a>
     </div>
     <div class="contact-direct">
       <a href="https://instagram.com/carehealthproject" target="_blank" rel="noopener" class="contact-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
         @carehealthproject
       </a>
-      <a href="mailto:carecommunityhealth@gmail.com" class="contact-link">
+      <a href="mailto:carehealthproject@gmail.com" class="contact-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        carecommunityhealth@gmail.com
+        carehealthproject@gmail.com
       </a>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <a href="#home" class="footer-logo">
     <img src="care-logo.png" alt="CARE" class="nav-logo-img" width="40" height="40">
   </a>
   <ul class="footer-links">
-    <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#eligibility">Eligibility</a></li>
-    <li><a href="#partnerships">Partnerships</a></li>
+    <li><a href="#partnerships">Partners</a></li>
     <li><a href="#board">Board</a></li>
+    <li><a href="#advisors">Advisors</a></li>
     <li><a href="#events">Events</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -1259,6 +1130,8 @@ function scrollToSection(id) {
   document.getElementById('nav-links')?.classList.remove('open');
 }
 
+const CALFRESH_MAX = { 1: 292, 2: 536, 3: 768, 4: 975, 5: 1158 };
+
 function updateElig() {
   const income = document.getElementById('income').value;
   const citizen = document.getElementById('citizen').value;
@@ -1266,57 +1139,65 @@ function updateElig() {
   const employ = document.getElementById('employ').value;
   const hh = parseInt(document.getElementById('hh').value, 10) || 1;
   const age = parseInt(document.getElementById('age').value, 10) || 0;
-  let calfreshClass, calfreshLabel, mediClass, mediLabel;
+  const maxSnap = CALFRESH_MAX[hh] || CALFRESH_MAX[5];
+
+  let calfreshClass, calfreshLabel, calfreshAmt;
+  let mediClass, mediLabel, mediAmt;
 
   if (citizen === 'no') {
     calfreshClass = 'badge-no'; calfreshLabel = 'May not qualify';
+    calfreshAmt = 'Check with CARE for options';
     mediClass = 'badge-check'; mediLabel = 'Check with CARE';
+    mediAmt = 'Coverage may still be available';
   } else if (income === 'low') {
     calfreshClass = 'badge-likely'; calfreshLabel = 'Likely eligible';
+    calfreshAmt = `Up to ~$${maxSnap}/mo (estimate)`;
     mediClass = 'badge-likely'; mediLabel = 'Likely eligible';
+    mediAmt = 'Low or $0 monthly premium (estimate)';
     if (student === 'yes') {
       calfreshClass = 'badge-check'; calfreshLabel = 'Check with CARE';
+      calfreshAmt = 'Student rules may apply';
     }
     if (hh >= 4 && employ === 'full') {
       calfreshClass = 'badge-check'; calfreshLabel = 'Check with CARE';
+      calfreshAmt = `Possibly up to ~$${maxSnap}/mo`;
     }
   } else if (income === 'mid') {
-    calfreshClass = hh >= 4 ? 'badge-likely' : 'badge-check';
-    calfreshLabel = hh >= 4 ? 'Likely eligible' : 'Check with CARE';
+    calfreshClass = hh >= 4 || employ === 'unemployed' ? 'badge-likely' : 'badge-check';
+    calfreshLabel = calfreshClass === 'badge-likely' ? 'Likely eligible' : 'Check with CARE';
+    calfreshAmt = calfreshClass === 'badge-likely' ? `Often $${Math.round(maxSnap * 0.35)}–$${Math.round(maxSnap * 0.7)}/mo` : 'Amount depends on income & size';
     mediClass = 'badge-likely'; mediLabel = 'Likely eligible';
-    if (employ === 'unemployed') {
-      calfreshClass = 'badge-likely'; calfreshLabel = 'Likely eligible';
-    }
+    mediAmt = 'Premium may be low or sliding-scale';
   } else {
     calfreshClass = 'badge-no'; calfreshLabel = 'May not qualify';
+    calfreshAmt = 'Income may exceed limits';
     mediClass = 'badge-check'; mediLabel = 'Check with CARE';
+    mediAmt = 'Other coverage options may apply';
   }
 
   if (age >= 65 && citizen !== 'no') {
     mediClass = 'badge-likely'; mediLabel = 'Likely eligible';
+    mediAmt = 'Ask about Medi-Cal / Medicare coordination';
   }
 
   document.getElementById('elig-rows').innerHTML =
-    `<div class="benefit-row"><span>CalFresh</span><span class="badge ${calfreshClass}">${calfreshLabel}</span></div>` +
-    `<div class="benefit-row"><span>Medi-Cal</span><span class="badge ${mediClass}">${mediLabel}</span></div>` +
-    `<div class="benefit-row"><span>Other programs</span><span class="badge badge-check">Check with CARE</span></div>`;
+    `<div class="benefit-row"><span>CalFresh</span><span class="benefit-meta"><span class="badge ${calfreshClass}">${calfreshLabel}</span><span class="benefit-amount">${calfreshAmt}</span></span></div>` +
+    `<div class="benefit-row"><span>Medi-Cal</span><span class="benefit-meta"><span class="badge ${mediClass}">${mediLabel}</span><span class="benefit-amount">${mediAmt}</span></span></div>` +
+    `<div class="benefit-row"><span>Other programs</span><span class="benefit-meta"><span class="badge badge-check">Check with CARE</span><span class="benefit-amount">GR, LIFE, food resources & more</span></span></div>`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   updateElig();
-
   ['hh', 'income', 'employ', 'age', 'student', 'zip', 'citizen'].forEach((id) => {
     const el = document.getElementById(id);
     if (!el) return;
     el.addEventListener('input', updateElig);
     el.addEventListener('change', updateElig);
   });
-
   document.getElementById('start-elig-btn')?.addEventListener('click', () => {
     scrollToSection('#eligibility');
     setTimeout(() => document.getElementById('hh')?.focus(), 450);
   });
-
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
