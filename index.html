@@ -478,6 +478,8 @@
     justify-content: center;
     box-shadow: var(--shadow);
     transition: border-color .2s, transform .2s;
+    text-decoration: none;
+    color: inherit;
   }
   .partner-card:hover { border-color: var(--green-mid); transform: translateY(-2px); }
   .partner-card img {
@@ -487,6 +489,32 @@
     object-fit: contain;
   }
   .partner-cta { margin-top: 28px; }
+
+  .sponsors-wrap { padding: 88px 40px; max-width: 1100px; margin: 0 auto; }
+  .sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-top: 48px;
+  }
+  .sponsor-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 16px;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--green-deep);
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: var(--shadow);
+    transition: border-color .2s, transform .2s, color .15s;
+  }
+  .sponsor-card:hover { border-color: var(--green-mid); transform: translateY(-2px); color: var(--green); }
 
   .board-wrap, .advisors-wrap, .contact-wrap { background: var(--bg-section); padding: 88px 0; }
   .board-inner, .advisors-inner, .contact-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
@@ -694,14 +722,15 @@
     section, .services-inner, .board-inner, .advisors-inner, .contact-inner { padding-left: 20px; padding-right: 20px; }
     .hero { padding: 56px 20px; min-height: auto; }
     .hero-stats { gap: 22px; flex-wrap: wrap; justify-content: center; }
-    .values-grid, .services-grid, .partners-grid, .board-grid, .contact-grid, .advisor-list { grid-template-columns: 1fr 1fr; }
+    .values-grid, .services-grid, .partners-grid, .board-grid, .contact-grid, .advisor-list, .sponsors-grid { grid-template-columns: 1fr 1fr; }
+    .sponsors-wrap { padding-left: 20px; padding-right: 20px; }
     .elig-container, .advisor-card { grid-template-columns: 1fr; }
     .elig-result-box { position: static; }
     footer { flex-direction: column; align-items: flex-start; padding: 28px 20px; }
   }
 
   @media (max-width: 560px) {
-    .values-grid, .services-grid, .partners-grid, .board-grid, .contact-grid, .advisor-list { grid-template-columns: 1fr; }
+    .values-grid, .services-grid, .partners-grid, .board-grid, .contact-grid, .advisor-list, .sponsors-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 30px; }
     .events-photo img { height: 220px; }
   }
@@ -729,6 +758,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#eligibility">Eligibility</a></li>
     <li><a href="#partnerships">Partnerships</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
     <li><a href="#board">Board</a></li>
     <li><a href="#advisors">Advisors</a></li>
     <li><a href="#events">Events</a></li>
@@ -746,8 +776,8 @@
   <div class="hero">
     <div class="hero-bg"></div>
     <div class="hero-badge">Community Access &amp; Resilience Education</div>
-    <h1>Breaking the cycle between food insecurity, healthcare access, and preventable disease</h1>
-    <p class="hero-sub">CARE walks alongside underserved individuals as they navigate healthcare, nutrition, and benefits &mdash; not just pointing to resources, but getting people there.</p>
+    <h1>Breaking the cycle between food insecurity, healthcare access, and preventable disease: one person, one appointment, one ride at a time.</h1>
+    <p class="hero-sub">CARE walks alongside underserved individuals as they navigate healthcare, nutrition, and benefits systems &mdash; not just pointing people toward resources, but getting them there.</p>
     <div class="hero-btns">
       <a href="#eligibility" class="btn-primary">Get Assistance</a>
       <a href="#contact" class="btn-outline">Volunteer With Us</a>
@@ -772,27 +802,27 @@
 <section id="about">
   <div class="section-kicker">Our Goal</div>
   <h2 class="section-title">Interrupt the Cycle Before Crisis Strikes</h2>
-  <p class="section-sub">Food insecurity and limited healthcare access compound each other. Through Enrollment Assistance, Education Outreach, Digital Literacy, and Transportation, CARE turns &ldquo;you're eligible&rdquo; into &ldquo;you're enrolled, informed, and able to show up.&rdquo;</p>
+  <p class="section-sub">Food insecurity and limited healthcare access don't happen in isolation &mdash; they compound each other, leaving underserved communities at higher risk of chronic and diet-related disease. CARE exists to interrupt that cycle before a crisis strikes. Through four integrated pillars, Enrollment Assistance, Education Outreach, Digital Literacy, and Transportation, CARE turns &ldquo;you're eligible for this&rdquo; into &ldquo;you're actually enrolled, informed, and able to show up.&rdquo;</p>
   <div class="values-grid">
     <div class="value-card">
       <div class="value-icon">01</div>
       <h3>Nutritious Food</h3>
-      <p>Access to food assistance and nutrition support that households can actually use.</p>
+      <p>Access to nutritious food and assistance households can actually use.</p>
     </div>
     <div class="value-card">
       <div class="value-icon">02</div>
-      <h3>Preventive Care</h3>
-      <p>Education people can act on &mdash; screenings, wellness, and early detection.</p>
+      <h3>Preventive Education</h3>
+      <p>Preventive healthcare education people can put into practice.</p>
     </div>
     <div class="value-card">
       <div class="value-icon">03</div>
-      <h3>Clear Navigation</h3>
-      <p>A practical path through healthcare and benefits systems.</p>
+      <h3>Clear Path</h3>
+      <p>A clear path through the healthcare and benefits system.</p>
     </div>
     <div class="value-card">
       <div class="value-icon">04</div>
       <h3>Getting There</h3>
-      <p>Help enrolling and support getting to appointments and offices.</p>
+      <p>Help getting enrolled and support getting to appointments.</p>
     </div>
   </div>
   <div class="team-banner">
@@ -852,7 +882,7 @@
           <li>Navigator Model: accompany or coordinate rides to SSA, Medi-Cal, interviews, and medical visits</li>
         </ul>
         <div style="margin-top:20px">
-          <a href="mailto:carehealthproject@gmail.com?subject=Request%20a%20Ride%20Escort" class="btn-outline" style="font-size:14px;padding:10px 20px">Request a Ride Escort</a>
+          <a href="https://forms.gle/Yr8oPDxjfgdGr4hg8" target="_blank" rel="noopener" class="btn-outline" style="font-size:14px;padding:10px 20px">Request a Ride Escort</a>
         </div>
       </div>
     </div>
@@ -934,14 +964,42 @@
   <h2 class="section-title">Community Partners</h2>
   <p class="section-sub">CARE's impact comes from organizations who trust us to serve their communities alongside them.</p>
   <div class="partners-grid">
-    <div class="partner-card"><img src="assets/partners/ccsi.png" alt="Central Community Services Inc" loading="lazy"></div>
-    <div class="partner-card"><img src="assets/partners/cpaf.webp" alt="Center for the Pacific Asian Families" loading="lazy"></div>
-    <div class="partner-card"><img src="assets/partners/la-missions.jpg" alt="LA Mission" loading="lazy"></div>
-    <div class="partner-card"><img src="assets/partners/ccnp.png" alt="LA CCNP" loading="lazy"></div>
-    <div class="partner-card"><img src="assets/partners/cca.webp" alt="Colorectal Cancer Alliance" loading="lazy"></div>
-    <div class="partner-card"><img src="assets/partners/medica-zone.png" alt="The Medica Zone USC Chapter" loading="lazy"></div>
+    <a class="partner-card" href="https://www.centralcommunityservices.org/" target="_blank" rel="noopener" aria-label="Central Community Services Inc">
+      <img src="assets/partners/ccsi.png" alt="Central Community Services Inc (CCSI)" loading="lazy">
+    </a>
+    <a class="partner-card" href="https://www.cpaf.info/" target="_blank" rel="noopener" aria-label="Center for the Pacific Asian Family">
+      <img src="assets/partners/cpaf.webp" alt="Center for the Pacific Asian Family (CPAF)" loading="lazy">
+    </a>
+    <a class="partner-card" href="https://losangelesmission.org/" target="_blank" rel="noopener" aria-label="LA Mission">
+      <img src="assets/partners/la-missions.jpg" alt="LA Mission" loading="lazy">
+    </a>
+    <a class="partner-card" href="https://laccnp.org/" target="_blank" rel="noopener" aria-label="Central City Neighborhood Partners">
+      <img src="assets/partners/ccnp.png" alt="Central City Neighborhood Partners (LA CCNP)" loading="lazy">
+    </a>
+    <a class="partner-card" href="https://www.ccalliance.org/" target="_blank" rel="noopener" aria-label="Colorectal Cancer Alliance">
+      <img src="assets/partners/cca.webp" alt="Colorectal Cancer Alliance" loading="lazy">
+    </a>
+    <a class="partner-card" href="https://themedicazone.info/" target="_blank" rel="noopener" aria-label="The Medica Zone">
+      <img src="assets/partners/medica-zone.png" alt="The Medica Zone" loading="lazy">
+    </a>
   </div>
   <p class="partner-cta section-sub">Interested in partnering with CARE? <a href="mailto:carehealthproject@gmail.com?subject=Partnership%20Inquiry" style="color:var(--green-dark);font-weight:600">Reach out here.</a></p>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="sponsors" class="sponsors-wrap">
+  <div class="section-kicker">Brand Sponsors</div>
+  <h2 class="section-title">Thank You to Our Sponsors</h2>
+  <p class="section-sub">Brands who help keep CARE's workshops stocked, our volunteers moving, and our community events running.</p>
+  <div class="sponsors-grid">
+    <a class="sponsor-card" href="https://www.uber.com/" target="_blank" rel="noopener">Uber</a>
+    <a class="sponsor-card" href="https://www.questdiagnostics.com/" target="_blank" rel="noopener">Quest Diagnostics</a>
+    <a class="sponsor-card" href="https://www.burstoralcare.com/" target="_blank" rel="noopener">BURST Oral Care</a>
+    <a class="sponsor-card" href="https://behuppy.com/" target="_blank" rel="noopener">Huppy</a>
+    <a class="sponsor-card" href="https://manyo.us/" target="_blank" rel="noopener">ma:nyo</a>
+  </div>
+  <p class="partner-cta section-sub">Interested in sponsoring CARE? <a href="mailto:carehealthproject@gmail.com?subject=Sponsorship%20Inquiry" style="color:var(--green-dark);font-weight:600">Get in touch.</a></p>
 </section>
 
 <div class="board-wrap" id="board">
@@ -1006,17 +1064,20 @@
       <div>
         <div class="board-name">Dr. Jane Lee</div>
         <div class="board-role">Faculty Advisor &middot; Associate Professor, USC Suzanne Dworak-Peck School of Social Work</div>
-        <p class="board-desc">Dr. Lee's research addresses health disparities among racial, ethnic minority, and immigrant populations, with a focus on how migration-related processes shape health behaviors and access to care. Her community-based approach informs CARE's model of walking alongside the people we serve.</p>
-        <a href="mailto:jlee6288@usc.edu" class="board-email">jlee6288@usc.edu</a>
+        <p class="board-desc">Dr. Lee's research addresses health disparities among racial, ethnic minority, and immigrant populations, with a focus on how migration-related processes shape health behaviors and access to care. Her community-based, participatory approach informs CARE's model of walking alongside the people we serve.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <a href="mailto:jlee6288@usc.edu" class="board-email">jlee6288@usc.edu</a>
+          <a href="https://dworakpeck.usc.edu/academics/faculty-directory/jane-lee" target="_blank" rel="noopener" class="board-email" style="color:var(--green)">Full bio &rarr;</a>
+        </div>
       </div>
     </div>
-    </div>
+  </div>
 </div>
 
 <section id="events">
   <div class="section-kicker">Events &amp; Schedule</div>
   <h2 class="section-title">Upcoming Outreach Events</h2>
-  <p class="section-sub">Enrollment drives, health workshops, digital literacy sessions, and food distribution partnerships.</p>
+  <p class="section-sub">Community health workshops, enrollment drives, digital literacy sessions, and food distribution partnerships.</p>
   <div class="events-photo">
     <img src="assets/photos/ccsi-outing.jpg" alt="CARE community outing with CCSI" loading="lazy">
   </div>
@@ -1031,10 +1092,36 @@
     </thead>
     <tbody>
       <tr>
-        <td style="color:var(--text-muted)">September 11, 2026</td>
-        <td style="color:var(--text-muted)">6:00 PM</td>
+        <td style="color:var(--text-muted)">October 10, 2026</td>
+        <td style="color:var(--text-muted)">10:00 AM&ndash;1:00 PM</td>
+        <td><div class="event-name"><div class="event-dot"></div>Annual Health Fair</div></td>
+        <td>CCNP</td>
+      </tr>
+      <tr>
+        <td style="color:var(--text-muted)">October 15, 2026</td>
+        <td style="color:var(--text-muted)">6:00&ndash;8:00 PM</td>
         <td><div class="event-name"><div class="event-dot"></div>Enrollment Drive</div></td>
-        <td>MacArthur Park</td>
+        <td>LA Mission</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section-title" style="margin-top:56px;font-size:clamp(24px,3vw,34px)">Recent Events</h2>
+  <table class="events-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Event</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="color:var(--text-muted)">September 15, 2026</td>
+        <td style="color:var(--text-muted)">1:00&ndash;2:00 PM</td>
+        <td><div class="event-name"><div class="event-dot"></div>Health Workshop</div></td>
+        <td>CPAF Shelter</td>
       </tr>
       <tr>
         <td style="color:var(--text-muted)">September 12, 2026</td>
@@ -1043,16 +1130,10 @@
         <td>LA Mission</td>
       </tr>
       <tr>
-        <td style="color:var(--text-muted)">September 15, 2026</td>
-        <td style="color:var(--text-muted)">1:00&ndash;2:00 PM</td>
-        <td><div class="event-name"><div class="event-dot"></div>Health Workshop</div></td>
-        <td>CPAF Shelter</td>
-      </tr>
-      <tr>
-        <td style="color:var(--text-muted)">October 10, 2026</td>
-        <td style="color:var(--text-muted)">10:00 AM&ndash;1:00 PM</td>
-        <td><div class="event-name"><div class="event-dot"></div>Annual Health Fair</div></td>
-        <td>CCNP</td>
+        <td style="color:var(--text-muted)">September 11, 2026</td>
+        <td style="color:var(--text-muted)">6:00 PM</td>
+        <td><div class="event-name"><div class="event-dot"></div>Enrollment Drive</div></td>
+        <td>MacArthur Park</td>
       </tr>
     </tbody>
   </table>
@@ -1110,6 +1191,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#eligibility">Eligibility</a></li>
     <li><a href="#partnerships">Partners</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
     <li><a href="#board">Board</a></li>
     <li><a href="#advisors">Advisors</a></li>
     <li><a href="#events">Events</a></li>
